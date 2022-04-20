@@ -2,11 +2,10 @@ class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort(key=lambda x:x[0])
             
-        # print(intervals)
         start=0
         end=1
         result=[]
-        n=len(intervals) # 2
+        n=len(intervals) 
         temp=intervals[0][1]
         
         while(end < n):
