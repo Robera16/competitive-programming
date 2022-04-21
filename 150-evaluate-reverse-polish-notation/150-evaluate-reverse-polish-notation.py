@@ -26,12 +26,9 @@ class Solution:
                     if(abs(op1) > abs(op2)):
                         result=0
                     else:
-                        result=trunc(op2/op1)
-                    
-                     
-                stack.append(result)
-                
+                        result=trunc(op2/op1)    
+                stack.append(result)    
             else:
                 stack.append(int(i))
-        
+
         return result
