@@ -11,6 +11,5 @@ class Solution:
             output.append(validRange)
             validRange-=1
         
-        print(arr)
         return output
             
