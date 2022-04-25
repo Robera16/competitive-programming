@@ -3,7 +3,7 @@ class Solution:
         arr.sort()
         dct={}
         stack=[]
-        stack.append(arr[0])
+        stack.append(arr[0]) 
         val=count=1
         while(val < len(arr)):
             if stack[-1]==arr[val]:
