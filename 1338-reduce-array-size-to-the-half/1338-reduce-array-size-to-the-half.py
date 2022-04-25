@@ -17,7 +17,7 @@ class Solution:
         dct=sorted(dct.items(),key= lambda x:x[1], reverse=True)
         val=dct[0][1]
         output=1
-        while(val < len(arr)//2):
+        while(val < len(arr)//2):      
             val+=dct[output][1]
             output+=1
         return output
