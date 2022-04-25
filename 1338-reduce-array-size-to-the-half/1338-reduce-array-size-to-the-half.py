@@ -11,7 +11,7 @@ class Solution:
             else:
                 dct[stack[-1]]=count 
                 count=1
-                stack.append(arr[val])
+                stack.append(arr[val]) 
             val+=1
         dct[stack[-1]]=count
         dct=sorted(dct.items(),key= lambda x:x[1], reverse=True)
