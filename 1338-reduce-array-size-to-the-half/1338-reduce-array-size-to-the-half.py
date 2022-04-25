@@ -7,9 +7,9 @@ class Solution:
         val=count=1
         while(val < len(arr)):
             if stack[-1]==arr[val]:
-                count+=1
+                count+=1 
             else:
-                dct[stack[-1]]=count
+                dct[stack[-1]]=count 
                 count=1
                 stack.append(arr[val])
             val+=1
