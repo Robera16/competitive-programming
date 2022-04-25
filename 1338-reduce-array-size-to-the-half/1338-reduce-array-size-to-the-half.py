@@ -4,8 +4,8 @@ class Solution:
         dct={}
         stack=[]
         stack.append(arr[0])
-        val=1
-        count=1
+        val=count=1
+        print(val, count)
         while(val < len(arr)):
             if stack[-1]==arr[val]:
                 count+=1
