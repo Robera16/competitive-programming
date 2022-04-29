@@ -6,13 +6,11 @@ class Solution:
             return len(nums)
         
         index=nums.index(val)
-        # print(index)
         while(nums[index]==val):
             if index==len(nums)-1:
                 nums.pop()
                 return len(nums)
             else:
-                # nums.pop(index)
                 del nums[index]
         
         return len(nums)
