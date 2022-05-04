@@ -2,7 +2,6 @@ class Solution:
     def maxArea(self, height: List[int]) -> int:
         leftPointer=0
         rightPointer=len(height)-1
-        n=len(height)/2
         area=calculateArea(leftPointer, rightPointer, height)
         
         while(leftPointer < rightPointer):
