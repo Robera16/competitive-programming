@@ -31,12 +31,7 @@ class Solution:
                 if x >= stack[-1]:
                     while(len(stack) and x >= stack[-1]):
                         stack.pop()
-                    stack.append(x)
-                else:
-                    stack.append(x)
-            else:
-                stack.append(x)
-         
+            stack.append(x)  
         return len(stack)
     
         
