@@ -15,7 +15,7 @@ class Solution:
         stack = []
         
         for i in range(len(nums)):
-            while stack and (nums[stack[len(stack)-1]] < nums[i]):
+            while stack and (nums[stack[-1]] < nums[i]):
                 answer[stack.pop()] = nums[i]
             stack.append(i)
                    
