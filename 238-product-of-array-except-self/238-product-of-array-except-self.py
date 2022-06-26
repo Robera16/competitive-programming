@@ -21,10 +21,3 @@ class Solution(object):
       
         return answer
         
-        
-        
-        """
-        :type nums: List[int]
-        :rtype: List[int]
-        """
-        
