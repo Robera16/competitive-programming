@@ -1,9 +1,6 @@
 class Solution(object):
 	def calculate(self, s):
-		"""
-		:type s: str
-		:rtype: int
-		"""
+        
 		if len(s)==1:
 			return int(s[0])
 
