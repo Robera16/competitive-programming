@@ -7,5 +7,4 @@ class Solution:
             else:
                 output=max(output, count)
                 count=0
-            
         return max(output, count)
