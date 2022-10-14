@@ -1,9 +1,7 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         dct=defaultdict(int)
-        counter=0
-        output=0
-        start=0
+        counter,output,start=0,0,0
         for i in range(len(s)):
             if s[i] not in dct:
                 dct[s[i]]=i
