@@ -1,6 +1,6 @@
 class Solution:
     def nearestValidPoint(self, x: int, y: int, points: List[List[int]]) -> int:
-        dct = {} # distance as key, index as value
+        dct = {} # distance as value, index as value key
         valid = False
         for index, coordinate in enumerate(points):
             if coordinate[0]==x or coordinate[1]==y:
