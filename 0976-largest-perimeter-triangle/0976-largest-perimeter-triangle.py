@@ -1,7 +1,7 @@
 class Solution:
     def largestPerimeter(self, nums: List[int]) -> int:
         """
-            A triangle is valid if sum of its two sides is greater than the third side
+            A triangle is valid if sum of any of its two sides is greater than the third side
         """
         nums.sort()
         for i in range(len(nums)-1, 1, -1):
