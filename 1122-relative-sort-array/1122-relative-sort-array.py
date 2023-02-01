@@ -8,9 +8,5 @@ class Solution:
             else:
                 output.append([value, count+value])
                 
-        
         sorted_nested = sorted(output, key=lambda x: x[1])
-        answer=[]
-        for lst in sorted_nested:
-            answer.append(lst[0])
-        return answer
+        return [i[0] for i in sorted_nested]
