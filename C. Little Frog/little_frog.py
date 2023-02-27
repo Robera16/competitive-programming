@@ -1,13 +1,11 @@
 n = int(input())
 left, right = 1, n
-output = []
+
 while left < right:
-    output.append(left)
-    output.append(right)
+    print(left,end=" ")
+    print(right,end=" ")
     left+=1
     right-=1
 
 if left==right:
-    output.append(left)
-
-print(*output)
+    print(left, end="")
