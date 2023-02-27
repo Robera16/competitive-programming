@@ -1,6 +1,5 @@
 n = int(input())
-left = 1
-right = n
+left, right = 1, n
 output = []
 while left < right:
     output.append(left)
