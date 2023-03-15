@@ -1,20 +1,6 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        """
-           dcts1={
-             a:1
-             b:1
-            }
-            
-            dcts2={
-                b:1
-                a:1
-            }
-            
-            s1='ab'
-            s2="eidbaooo"
-            
-        """
+        
         dcts1={}
         for char in s1:
             if char in dcts1:
