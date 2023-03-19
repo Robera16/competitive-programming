@@ -1,9 +1,7 @@
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
-        start=0
-        sHeap=[0]*26
-        pHeap=[0]*26
-        k=len(p)
+        start, k=0, len(p)
+        sHeap, pHeap=[0]*26, [0]*26
         output=[]
         for c in p:
             pHeap[ord(c)-ord('a')]+=1
