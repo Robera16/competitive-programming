@@ -16,7 +16,6 @@ class Solution:
             inorderTraverse(root.right)
         
         inorderTraverse(root)
-        res.sort()
         i=0
         min_val=float(inf)
         while i < len(res)-1:
