@@ -16,10 +16,8 @@ class Solution:
             output.append([root.val,c])
             inorderTraversal(root.right, output,c+1)
             
-        inorderTraversal(p, output_p,0)
-        inorderTraversal(q, output_q,0)
+        inorderTraversal(p, output_p, 0)
+        inorderTraversal(q, output_q, 0)
         
-        print(output_p)
-        print(output_q)
         return output_p==output_q
         
