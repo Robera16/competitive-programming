@@ -9,12 +9,12 @@ class Solution:
         output_p = []
         output_q = []
         
-        def inorderTraversal(root, output,c):
+        def inorderTraversal(root, output, c):
             if not root:
                 return
-            inorderTraversal(root.left, output,c+1)
-            output.append([root.val,c])
-            inorderTraversal(root.right, output,c+1)
+            inorderTraversal(root.left, output, c+1)
+            output.append([root.val, c])
+            inorderTraversal(root.right, output, c+1)
             
         inorderTraversal(p, output_p, 0)
         inorderTraversal(q, output_q, 0)
