@@ -10,20 +10,21 @@ class Solution:
             return 0
         
         q = deque()
-        q.append((root,1))
-        maxwidth = 0
+        q.append([root, 1])
+        max_width = 0
+        
         while q:
-            level_length = len(q)
-            _, last_column = q[-1]
-            _, first_column = q[0]
             
-            maxwidth = max(maxwidth, last_column-first_column+1)
+            _, first_col = q[0]
+            _, last_col = q[-1]
             
-            for _ in range(level_length):
-                tmproot,column = q.popleft()
-                if tmproot.left:
-                    q.append((tmproot.left, column*2))
-                if tmproot.right:
-                    q.append((tmproot.right, column*2+1))
+            max_width = max(max_width, last_col - first_col + 1)
             
-        return maxwidth
+            for i in range(len(q)):
+                temproot, col = q.popleft()
+                if temproot.left:
+                    q.append([temproot.left, col*2])
+                if temproot.right:
+                    q.append([temproot.right, col*2 + 1])
+        
+        return max_width
