@@ -1,17 +1,12 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        output=[]
-        def permutation(start, curr):
-            if len(curr)==len(nums):
-                output.append(curr.copy())
-                return
-            
-            for i in range(len(nums)):
-                if nums[i] in curr: continue
-                curr.append(nums[i])
-                permutation(i+1, curr)
-                curr.pop()
-                
-            
-        permutation(0, [])
+        output = []
+        self.dfs(nums, [], output)
         return output
+
+    def dfs(self, nums, path, output):
+        if not nums:
+            output.append(path)
+            #return # backtracking
+        for i in range(len(nums)):
+            self.dfs(nums[:i]+nums[i+1:], path+[nums[i]], output)
