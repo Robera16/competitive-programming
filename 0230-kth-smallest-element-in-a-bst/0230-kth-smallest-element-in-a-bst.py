@@ -17,5 +17,4 @@ class Solution:
             traverse(root.right)
         
         traverse(root)
-        output.sort()
         return output[k-1]
