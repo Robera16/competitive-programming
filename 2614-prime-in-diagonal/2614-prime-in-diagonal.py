@@ -1,17 +1,16 @@
 class Solution:
     def diagonalPrime(self, nums: List[List[int]]) -> int:
-        n=len(nums)
-        prime, output= False, 0
         
+        n, output= len(nums), 0
+    
         for i in range(n):
             if self.is_prime(nums[i][i]):
                 output=max(output, nums[i][i])
-                prime=True
+                
             if self.is_prime(nums[i][n-1-i]):  
                 output=max(output, nums[i][n-1-i])
-                prime=True
-        
-        if prime and output!=1:
+                
+        if output and output!=1:
             return output
         return 0
         
