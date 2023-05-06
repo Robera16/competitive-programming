@@ -6,5 +6,8 @@ class Solution:
         # uniques [x, z, y]
         # x+z+y - (3x+3z+y)/3
         # y -y/3 => 2y/3
-        # multiply the number by 2/3(1.5) to find y
+        # multiply the number by 3/2(1.5) to find y
         # to assume the value of any fracton of numbers left during division use rounding
+        
+        
+        
