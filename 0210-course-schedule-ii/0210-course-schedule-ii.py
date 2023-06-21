@@ -1,7 +1,6 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
            
-            from queue import Queue
             def topological_sort(graph):
                 
                 in_degree = [0] * len(graph)
