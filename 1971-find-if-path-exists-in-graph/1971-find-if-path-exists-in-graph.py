@@ -1,21 +1,26 @@
 class Solution:
     def validPath(self, n: int, edges: List[List[int]], source: int, destination: int) -> bool:
+        # Store all edges in 'graph'.
         graph = collections.defaultdict(list)
-        for u, v in edges:
-            graph[u].append(v)
-            graph[v].append(u)
+        for a, b in edges:
+            graph[a].append(b)
+            graph[b].append(a)
         
-        visited = set([source])
-        queue = deque([source])
-        
-        while(len(queue)):
-            node = queue.popleft()
-            if node==destination:
+        # Store all the nodes to be visited in 'queue'.
+        seen = [False] * n
+        seen[source] = True
+        queue = collections.deque([source])
+    
+        while queue:
+            curr_node = queue.popleft()
+            if curr_node == destination:
                 return True
-            
-            for neighbour in graph[node]:
-                if neighbour not in visited:
-                    visited.add(neighbour)
-                    queue.append(neighbour)
-                    
+
+            # For all the neighbors of the current node, if we haven't visit it before,
+            # add it to 'queue' and mark it as visited.
+            for next_node in graph[curr_node]:
+                if not seen[next_node]:
+                    seen[next_node] = True
+                    queue.append(next_node)
+        
         return False
