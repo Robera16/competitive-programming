@@ -14,7 +14,6 @@ class Solution:
             parent[ra] = parent[rb] = min(ra, rb)#assign the MIN value to both roots in dict (parent)
         
         parent={} # Created a dict to store the root values
-        print(zip(s1,s2))
         for c1,c2 in zip(s1,s2): 
             union(c1,c2) #Sending zipped values to UNION function
         return ''.join(parent[find(c)] for c in baseStr)
