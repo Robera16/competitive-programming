@@ -1,16 +1,27 @@
 class Solution:
     def relativeSortArray(self, arr1: List[int], arr2: List[int]) -> List[int]:
-        output=[]
-        count=len(arr2)
         dct={}
-        for index, val in enumerate(arr2):
-            dct[val] = index
-            
-        for value in arr1:
-            if value in dct:  
-                output.append([value, dct[value]])
+        for i in range(len(arr2)):
+            dct[arr2[i]]=i
+        
+        res = []
+        other = []
+        output = []
+        for ele in arr1:
+            if ele in dct:
+                res.append([ele, dct[ele]])
             else:
-                output.append([value, count+value])
-                
-        sorted_nested = sorted(output, key=lambda x: x[1])
-        return [i[0] for i in sorted_nested]
+                other.append(ele)
+        
+        sorted_lst = sorted(res, key=lambda x: x[1])
+        # print(sorted_lst)
+        for lst in sorted_lst:
+            output.append(lst[0])
+            
+        other.sort()
+        output.extend(other)
+        return output
+        
+        
+        
+        
